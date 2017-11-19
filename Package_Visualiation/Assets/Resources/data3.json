@@ -1,0 +1,231 @@
+{
+    "items": [
+
+      {
+        "name": "Screws",
+        "width": 20.5,
+        "height": 50.5,
+        "depth": 40.5,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          0.0,
+          0.0,
+          0.0
+          ]
+      },
+        
+      {
+        "name": "box",
+        "width": 17.5,
+        "height": 10.5,
+        "depth": 11.6,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          20.0,
+          0.0,
+          0.0
+          ]
+      },
+      {
+        "name": "box",
+        "width": 17.5,
+        "height": 15.1,
+        "depth": 22.9,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          20.0,
+          0.9,
+          0.87
+          ]
+      },
+      {
+        "name": "box",
+        "width": 50.5,
+        "height": 35.6,
+        "depth": 10.4,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          40.9,
+          0.1,
+          15.1
+          ]
+      },
+      {
+        "name": "box",
+        "width": 50.5,
+        "height": 35.6,
+        "depth": 10.4,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          40.9,
+          0.1,
+          0.3
+          ]
+      },
+      {
+        "name": "box",
+        "width": 50.5,
+        "height": 35.6,
+        "depth": 10.4,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          60.9,
+          0.1,
+          0.5
+          ]
+      },
+      {
+        "name": "123box",
+        "width": 50.5,
+        "height": 17.8,
+        "depth": 7.5,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          80.9,
+          0.7,
+          0.0
+          ]
+      },
+      {
+        "name": "qwebox",
+        "width": 50.5,
+        "height": 17.9,
+        "depth": 7.5,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          100.9,
+          0.9,
+          0.0
+          ]
+      },
+      {
+        "name": "box",
+        "width": 17.5,
+        "height": 13.7,
+        "depth": 29.5,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -9.01,
+          42.9,
+          1.9
+          ]
+      },
+      {
+        "name": "box",
+        "width": 15.4,
+        "height": 7.44,
+        "depth": 11.48,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -8.8,
+          53.6,
+          11.6
+          ]
+      },
+      {
+        "name": "box",
+        "width": 15.4,
+        "height": 7.44,
+        "depth": 11.48,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -8.8,
+          53.6,
+          2.0
+          ]
+      },
+      {
+        "name": "box",
+        "width": 15.4,
+        "height": 7.44,
+        "depth": 9.48,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -8.8,
+          53.6,
+          -7.7
+          ]
+      },
+      {
+        "name": "box",
+        "width": 29.39,
+        "height": 20.1,
+        "depth": 16.347,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -34.2,
+          46.4,
+          11.2
+          ]
+      },
+      {
+        "name": "box",
+        "width": 29.39,
+        "height": 10.1,
+        "depth": 16.347,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -34.2,
+          41.3,
+          -5.8
+          ]
+      },
+      {
+        "name": "box",
+        "width": 29.39,
+        "height": 10.1,
+        "depth": 16.347,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -34.2,
+          51.7,
+          -5.8
+          ]
+      }
+    ]
+}

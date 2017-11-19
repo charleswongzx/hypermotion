@@ -1,0 +1,231 @@
+{
+    "items": [
+
+      {
+        "name": "Machine Parts",
+        "width": 20.5,
+        "height": 50.5,
+        "depth": 40.5,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          10.0,
+          15.0,
+          0.0
+          ]
+      },
+        
+      {
+        "name": "Circuit Boards",
+        "width": 17.5,
+        "height": 10.5,
+        "depth": 11.6,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          10.0,
+          45.5,
+          12.7
+          ]
+      },
+      {
+        "name": "Metal Shelf",
+        "width": 17.5,
+        "height": 15.1,
+        "depth": 22.9,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          10.0,
+          47.9,
+          -5.87
+          ]
+      },
+      {
+        "name": "Lidar",
+        "width": 50.5,
+        "height": 35.6,
+        "depth": 10.4,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -26.9,
+          18.1,
+          15.1
+          ]
+      },
+      {
+        "name": "Graphic Cards",
+        "width": 50.5,
+        "height": 35.6,
+        "depth": 10.4,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -26.9,
+          18.1,
+          4.3
+          ]
+      },
+      {
+        "name": "Filament",
+        "width": 50.5,
+        "height": 35.6,
+        "depth": 10.4,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -26.9,
+          18.1,
+          -6.5
+          ]
+      },
+      {
+        "name": "Pens",
+        "width": 50.5,
+        "height": 17.8,
+        "depth": 7.5,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -26.9,
+          8.7,
+          -16.0
+          ]
+      },
+      {
+        "name": "Cables",
+        "width": 50.5,
+        "height": 17.9,
+        "depth": 7.5,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -26.9,
+          26.9,
+          -16.0
+          ]
+      },
+      {
+        "name": "Connecters",
+        "width": 17.5,
+        "height": 13.7,
+        "depth": 29.5,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -9.01,
+          42.9,
+          1.9
+          ]
+      },
+      {
+        "name": "IMU",
+        "width": 15.4,
+        "height": 7.44,
+        "depth": 11.48,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -8.8,
+          53.6,
+          11.6
+          ]
+      },
+      {
+        "name": "LIDAR",
+        "width": 15.4,
+        "height": 7.44,
+        "depth": 11.48,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": true,
+        "position": [
+          -8.8,
+          53.6,
+          2.0
+          ]
+      },
+      {
+        "name": "Engine Parts",
+        "width": 15.4,
+        "height": 7.44,
+        "depth": 9.48,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": true,
+        "stackable": false,
+        "position": [
+          -8.8,
+          53.6,
+          -7.7
+          ]
+      },
+      {
+        "name": "GPU",
+        "width": 29.39,
+        "height": 20.1,
+        "depth": 16.347,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": false,
+        "position": [
+          -34.2,
+          46.4,
+          11.2
+          ]
+      },
+      {
+        "name": "RAM",
+        "width": 29.39,
+        "height": 10.1,
+        "depth": 16.347,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": true,
+        "stackable": false,
+        "position": [
+          -34.2,
+          41.3,
+          -5.8
+          ]
+      },
+      {
+        "name": "Wires",
+        "width": 29.39,
+        "height": 10.1,
+        "depth": 16.347,
+        "rotationType": 0,
+        "rotatable": true,
+        "fragile": false,
+        "stackable": false,
+        "position": [
+          -34.2,
+          51.7,
+          -5.8
+          ]
+      }
+    ]
+}
