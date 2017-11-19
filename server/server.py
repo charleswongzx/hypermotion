@@ -1,23 +1,8 @@
-from flask import Flask, json, jsonify
+from flask import Flask, jsonify
 from flask import request
 import sqlite3
 
-
 app = Flask(__name__)
-
-# def post_dimensions(payload):
-#     r = requests.post(' https://svfjld11of.execute-api.ap-southeast-1.amazonaws.com/prod/cargo-management', params=payload)
-#     return r
-
-
-# TODO:
-# receive json from upload x
-# convert to dict x
-# upload dict to sqlite db x
-# implement func to draw all pax from db x
-# optimisation func to place all pax from db
-# GET call to give id, dimensions, rotatable, fragile, stackable, dangerous as json
-
 conn = None
 
 
@@ -28,9 +13,9 @@ def init_db():
     create_table = '''CREATE TABLE packages (
                                             id integer,
                                             name text,
-                                            dim1 real,
-                                            dim2 real,
-                                            dim3 real,
+                                            width real,
+                                            height real,
+                                            depth real,
                                             weight real,
                                             rotatable numeric,
                                             fragile numeric,
@@ -90,6 +75,10 @@ def get_from_db():
         rows = c.fetchall()
         for row in rows:
             print(row)
+            row['position'] = (row['posX'], row['posY'], row['posZ'])
+            row.pop('posX')
+            row.pop('posY')
+            row.pop('posZ')
             # TODO: fetch, optimise and add position to each box
             # consider just placing dummy position values
             packages.append(row)
@@ -103,7 +92,6 @@ def get_from_db():
         return 'DB retrieval failed'
 
 
-
 @app.route('/')
 def hello_world():
     return 'hello world'
@@ -111,7 +99,7 @@ def hello_world():
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    content = request.get_json(silent=True)
+    content = request.get_json(silent=False)
     print(content)
     try:
         add_to_db(content)
@@ -142,60 +130,4 @@ def add_test_package():
 
     add_to_db(payload)
 
-
 init_db()
-
-
-
-
-
-# @app.route('/submit', methods=['POST'])
-# def submit():
-#     content = request.get_json(silent=True)
-#
-#     dim1 = content['dim1']
-#     dim2 = content['dim2']
-#     dim3 = content['dim3']
-#     iden = content['id']
-#     weight = content['weight']
-#     rotatable = content['rotatable']
-#     fragile = content['fragile']
-#     stackable = content['stackable']
-#
-#     payload = {
-#         "id": iden,
-#         "name": iden,
-#         "width": dim1,
-#         "height": dim2,
-#         "depth": dim3,
-#         "weight": weight,
-#         "rotatable": rotatable,
-#         "fragile": fragile,
-#         "stackable": stackable
-#     }
-#
-#     print('Sending payload to server..')
-#     r = post_dimensions(payload)
-#     print('Payload sent:\n', r.text)
-#
-#     return "Received"
-
-
-# def compute(request):
-#     print(request.args.get('string','')) #get data from post request here
-#     int = subprocess.call(["ls", "-l"]) # call cpp exec here
-#     return str(int)
-
-# payload = {
-#     "id": 1,
-#     "name": "item",
-#     "width": 50,
-#     "height": 20,
-#     "depth": 30,
-#     "weight": 20,
-#     "rotatable": 'true',
-#     "fragile": 'false',
-#     "stackable": 'true'
-# }
-
-#post_dimensions(payload)
