@@ -11,7 +11,7 @@ def init_db():
     conn = sqlite3.connect('packery.db', isolation_level=None)
     table_exists = "SELECT name FROM sqlite_master WHERE type='table' AND name='packages';"
     create_table = '''CREATE TABLE packages (
-                                            id integer,
+                                            id text,
                                             name text,
                                             width real,
                                             height real,
@@ -37,9 +37,9 @@ def add_to_db(content):
     row = []
     row.append(content['id'])
     row.append(content['name'])
-    row.append(content['dim1'])
-    row.append(content['dim2'])
-    row.append(content['dim3'])
+    row.append(float(content['dim1']))
+    row.append(float(content['dim2']))
+    row.append(float(content['dim3']))
     row.append(content['weight'])
     row.append(content['rotatable'])
     row.append(content['fragile'])
@@ -56,25 +56,25 @@ def add_to_db(content):
 
 
 def calc_pos(packages):
-    current_x = 0
-    current_y = 0
+    current_x = 20
+    current_y = 20
     solved_packages = []
     # counter = 0
 
     for package in packages:
-        width = package['dim1']
-        height = package['dim2']
-        depth = package['dim3']
+        width = package['width']
+        height = package['height']
+        depth = package['depth']
 
-        package['position'][0] = width/2 + current_x
-        package['position'][1] = depth/2 + current_y
-        package['position'][2] = height/2
+        package['position'][0] = -width/2 + current_x
+        package['position'][2] = -depth/2 + current_y
+        package['position'][1] = height/2
 
         solved_packages.append(package)
 
-        current_x += width
+        current_x -= width
         # counter += 1
-        
+
     return solved_packages
 
 
@@ -97,11 +97,13 @@ def get_from_db():
         rows = c.fetchall()
         for row in rows:
             print(row)
-            row['position'] = (row['posX'], row['posY'], row['posZ'])
+            row['position'] = [row['posX'], row['posY'], row['posZ']]
             row.pop('posX')
             row.pop('posY')
             row.pop('posZ')
             packages.append(row)
+
+        packages = calc_pos(packages)
 
         json_payload = jsonify(items=packages)
 
@@ -138,15 +140,19 @@ def add_test_package():
     payload = {
         "id": 1,
         "name": "TEST ITEM",
-        "dim1": 50,
-        "dim2": 20,
-        "dim3": 30,
-        "weight": 20,
-        "rotatable": 'true',
-        "fragile": 'false',
-        "stackable": 'true'
+        "dim1": 20.0,
+        "dim2": 16.0,
+        "dim3": 12.0,
+        "weight": 20.0,
+        "rotatable": True,
+        "fragile": False,
+        "stackable": True
     }
 
     add_to_db(payload)
 
 init_db()
+
+add_test_package()
+add_test_package()
+add_test_package()
