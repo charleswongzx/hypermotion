@@ -55,6 +55,29 @@ def add_to_db(content):
     return c.lastrowid
 
 
+def calc_pos(packages):
+    current_x = 0
+    current_y = 0
+    solved_packages = []
+    # counter = 0
+
+    for package in packages:
+        width = package['dim1']
+        height = package['dim2']
+        depth = package['dim3']
+
+        package['position'][0] = width/2 + current_x
+        package['position'][1] = depth/2 + current_y
+        package['position'][2] = height/2
+
+        solved_packages.append(package)
+
+        current_x += width
+        # counter += 1
+        
+    return solved_packages
+
+
 def dict_factory(cursor, row):
     d = {}
     for idx, col in enumerate(cursor.description):
@@ -67,7 +90,6 @@ def get_from_db():
     conn.row_factory = dict_factory
     c = conn.cursor()
     c.execute('''SELECT * FROM packages''')
-    # print(c.fetchone())
 
     try:
         packages = []
@@ -79,11 +101,8 @@ def get_from_db():
             row.pop('posX')
             row.pop('posY')
             row.pop('posZ')
-            # TODO: fetch, optimise and add position to each box
-            # consider just placing dummy position values
             packages.append(row)
 
-        # jsonStr = json.dumps(packages)
         json_payload = jsonify(items=packages)
 
         return json_payload
