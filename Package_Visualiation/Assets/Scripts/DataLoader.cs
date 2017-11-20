@@ -135,4 +135,47 @@ public class DataLoader : MonoBehaviour {
        
         }
     }
+
+	IEnumerator GetRequestToken()
+	{
+		using (UnityWebRequest www = UnityWebRequest.Post ("https://api.lufthansa.com/v1/oauth/token?client_id=mkzbeyrz2r49z3xmeqxxznkq&client_secret=QdA6tsas2b"))
+
+		{
+			yield return www.Send();
+
+
+			// Show results as text
+			Debug.Log(www.downloadHandler.text);
+			tokenBearer = JsonMapper.ToObject(www.downloadHandler.text);
+			LoadJson();
+
+			// Or retrieve results as binary data
+			byte[] results = www.downloadHandler.data;
+
+		}
+	}
+
+	IEnumerator GetCargoFlights()
+	{
+		 string startDest;
+		 string endDest;
+		 string date;
+
+
+		using (UnityWebRequest www = UnityWebRequest.Post(("https://api.lufthansa.com/v1/cargo/getRoute/"+ startDest + "-" + endDest + "/" + date + "/YNZ")))
+		{
+			yield return www.Send();
+
+
+			// Show results as text
+			Debug.Log(www.downloadHandler.text);
+			flightData = JsonMapper.ToObject(www.downloadHandler.text);
+			LoadJson();
+
+			// Or retrieve results as binary data
+			byte[] results = www.downloadHandler.data;
+
+		}
+	}
+		
 }

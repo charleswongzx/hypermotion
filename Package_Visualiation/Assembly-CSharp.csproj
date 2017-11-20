@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7C6FB6C8-5987-1F21-27CD-15245B3C3560}</ProjectGuid>
+    <ProjectGuid>{A3FED37E-23D6-80F6-C395-4F7993A4B43B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -72,7 +72,7 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="LitJson">
- <HintPath>/Users/Skara/Downloads/std-cat-economyclass-master-8847f831ecec8a7c6e7611507f9a3b0ca8e7624d/final/PackageViz_laid out/Assets/LitJson.dll</HintPath>
+ <HintPath>/Users/Skara/Documents/Skara/Projects/Hackathons/Hypermotion/Package_Visualiation/Assets/LitJson.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
